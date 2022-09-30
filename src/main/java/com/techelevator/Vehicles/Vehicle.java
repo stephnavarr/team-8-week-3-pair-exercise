@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.Vehicles;
 
 public interface Vehicle {
 

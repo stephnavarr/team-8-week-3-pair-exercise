@@ -1,6 +1,8 @@
-package com.techelevator;
+package com.techelevator.Vehicles;
 
-public class Car implements Vehicle{
+import static java.lang.Math.round;
+
+public class Car implements Vehicle {
 
     private boolean hasTrailer;
 
@@ -18,8 +20,18 @@ public class Car implements Vehicle{
         }
     }
 
+
+
     public String toString() {
-        System.out.println();
+
+        if (hasTrailer) {
+
+            return "Car (with trailer) ";
+
+        } else {
+
+            return "Car ";
+        }
     }
 
 
