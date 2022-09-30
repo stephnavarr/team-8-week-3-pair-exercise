@@ -19,4 +19,9 @@ public class ThirdClass implements DeliveryDriver{
         }
         return rate;
     }
-}
+
+    public String toString(){
+
+        return "Postal Service (3rd Class)";
+
+    }}

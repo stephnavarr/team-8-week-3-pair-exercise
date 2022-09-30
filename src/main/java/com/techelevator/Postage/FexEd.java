@@ -17,4 +17,9 @@ public class FexEd implements DeliveryDriver{
             return rate;
         } return rate;
     }
+
+    public String toString() {
+        return "FexEd";
+
+    }
 }

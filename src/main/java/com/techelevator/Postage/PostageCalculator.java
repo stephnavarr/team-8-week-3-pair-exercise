@@ -1,6 +1,5 @@
 package com.techelevator.Postage;
 
-import com.sun.tools.jdeprscan.scan.Scan;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +17,14 @@ public class PostageCalculator {
 
         System.out.println("(P)ounds or (O)unces? ");
 
+
         String unitInput = myScanner.nextLine().toLowerCase();
         if(unitInput.equals("p") || unitInput.equals("pounds")) {
-            weightInput = (weightInput/16);
+            weightInput = (weightInput * 16);
         }
+
+        System.out.println("What distance will it be traveling? ");
+        int distanceInput = Integer.parseInt(myScanner.nextLine());
 
         List <DeliveryDriver> deliverDrivers = new ArrayList<>();
         FirstClass firstClass = new FirstClass();
@@ -36,24 +39,22 @@ public class PostageCalculator {
         deliverDrivers.add(secondClass);
         deliverDrivers.add(thirdClass);
         deliverDrivers.add(fexEd);
-        deliverDrivers.add(nextDaySPU);
-        deliverDrivers.add(twoDaySPU);
         deliverDrivers.add(fourDaySPU);
+        deliverDrivers.add(twoDaySPU);
+        deliverDrivers.add(nextDaySPU);
+
+        System.out.printf("%-20s", "Delivery Method");
+        System.out.printf("%40s", "$ cost");
+        System.out.println("\n--------------------------------------------------------------------------");
+
+        for(int i = 0; i < deliverDrivers.size(); i++) {
+
+            System.out.printf("%-20s",deliverDrivers.get(i).toString());
+            System.out.printf("%40.2f", deliverDrivers.get(i).calculateRate(distanceInput, weightInput));
+            System.out.println();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
 
 
 
