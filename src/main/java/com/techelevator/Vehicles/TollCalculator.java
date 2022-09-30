@@ -24,7 +24,7 @@ public class TollCalculator {
 
         System.out.printf("%-20s", "Vehicle") ;
 
-        System.out.printf("%15s", "Distance Traveled");
+        System.out.printf("%18s", "Distance Traveled");
 
         System.out.printf("%25s", "Toll $");
         System.out.println("\n----------------------------------------------------------------");
@@ -58,11 +58,6 @@ public class TollCalculator {
 
         System.out.println("\nTotal Miles Traveled: " + distanceTraveled);
         System.out.println("Total Tollbooth Revenue: $" + tollTotal);
-
-
-
-
-
 
 
 
