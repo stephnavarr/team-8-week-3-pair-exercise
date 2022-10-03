@@ -26,7 +26,7 @@ public class TollCalculator {
 
         System.out.printf("%18s", "Distance Traveled");
 
-        System.out.printf("%25s", "Toll $");
+        System.out.printf("%23s", "Toll $");
         System.out.println("\n----------------------------------------------------------------");
 
 
@@ -41,6 +41,8 @@ public class TollCalculator {
             tollTotal += vehicles.get(i).calculateToll(randomDistance);
             distanceTraveled += randomDistance;
 
+            //String dollarSign = " $";
+
 
 
 
@@ -50,14 +52,14 @@ public class TollCalculator {
 
             System.out.printf("%-20s", vehicles.get(i).toString());
             System.out.printf("%15d", randomDistance);
-            System.out.printf("%25.2f", vehicles.get(i).calculateToll(randomDistance));
+            System.out.printf("%25s", "$" + vehicles.get(i).calculateToll(randomDistance));
             System.out.println();
 
 
         }
 
         System.out.println("\nTotal Miles Traveled: " + distanceTraveled);
-        System.out.println("Total Tollbooth Revenue: $" + tollTotal);
+        System.out.printf("Total Tollbooth Revenue $" + "%.2f", tollTotal);
 
 
 

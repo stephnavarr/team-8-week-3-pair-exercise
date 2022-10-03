@@ -44,13 +44,14 @@ public class PostageCalculator {
         deliverDrivers.add(nextDaySPU);
 
         System.out.printf("%-20s", "Delivery Method");
-        System.out.printf("%40s", "$ cost");
+        System.out.printf("%45s", "$ cost");
         System.out.println("\n--------------------------------------------------------------------------");
 
         for(int i = 0; i < deliverDrivers.size(); i++) {
 
-            System.out.printf("%-20s",deliverDrivers.get(i).toString());
-            System.out.printf("%40.2f", deliverDrivers.get(i).calculateRate(distanceInput, weightInput));
+            System.out.printf("%-30s",deliverDrivers.get(i).toString());
+            System.out.printf("%30s", "$");
+            System.out.printf("%.2f", deliverDrivers.get(i).calculateRate(distanceInput, weightInput));
             System.out.println();
 
 
